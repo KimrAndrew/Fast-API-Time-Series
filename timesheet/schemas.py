@@ -1,15 +1,13 @@
 from typing import List, Optional
 
-from datetime import date
-
 from pydantic import BaseModel
 
+from datetime import date
 
 class TimesheetBase(BaseModel):
+    employee_id: int
     date: date
     hours: int
-    employee_id: int
-
 
 class TimesheetCreate(TimesheetBase):
     pass
